@@ -41,14 +41,22 @@ echo $this->shortcodes([guides parent="guides" number="10" length="200" author="
 
 ## Using the `[toc]` Shortcode
 
-This one is simple. Just put `[toc]` anywhere on a page that is structured using `H2` elements and that area will display a linked table of contents for the page.Each `H2` will be given a unique `id` (careful, it will replace existing `id`s) and a "back to top" link will be appended after the `H2`. Basically, the result is like a standard old-school FAQ.
+This one is simple. Just put `[toc]` anywhere on a page that is structured using `H2` elements and that area will display a linked table of contents for the page.Each `H2` will be given a unique `id` (careful, it will replace existing `ids`) and a "back to top" link will be appended after the `H2`. Basically, the result is like a standard old-school FAQ.
 
-## Styles
+## Other Notes
+
+### Styles
 
 Note that this plugin does not ship with any CSS. If you don't like the way something looks, you can address it in your theme's stylesheet.
+
+### JavaScript
+
+Note that tables of contents are generated using JavaScript. If the user doesn't have JavaScript enabled or if there's some sort of error, the page will just look ... normal. No table of contents. Not a big deal. If something isn't working, please check the browser console for obvious content errors (like not having any `H2s` on the page) before reporting a bug.
 
 ## Screenshots
 
 ![Screenshot](plugin.png)
+_add `[toc]` to any SimplePage that is structured with `H2s`_
 
 ![Screenshot](plugin2.png)
+_add `[guides]` to a SimplePage or `$this->shortcodes([guides])` to any theme template_
