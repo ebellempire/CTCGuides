@@ -2,7 +2,7 @@
 
 An Omeka plugin that adds shortcodes for displaying a list of Simple Pages sub-pages and adding a generated table of contents with back-to-top links. Created specifically for the Cleveland Teaching Collaborative to manage content guides using the default Simple Pages interface.
 
-_adapted from [https://github.com/ebellempire/BlogShortcode](@ebellempire/BlogShortcode)_
+_adapted from [@ebellempire/BlogShortcode](https://github.com/ebellempire/BlogShortcode)_
 
 ## Using the `[guides]` Shortcode
 
