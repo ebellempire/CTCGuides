@@ -51,7 +51,9 @@ Note that this plugin does not ship with any CSS. If you don't like the way some
 
 ### JavaScript
 
-Note that tables of contents are generated using JavaScript. If the user doesn't have JavaScript enabled or if there's some sort of error, the page will just look ... normal. No table of contents. Not a big deal. If something isn't working, please check the browser console for obvious content errors (like not having any `H2s` on the page) before reporting a bug.
+Note that tables of contents are generated using JavaScript. The selector for getting all the `H2s` is `.primary article h2` meaning your `H2s` need to be inside an `<article>` that is inside a container with the class of `primary`. If that's not the case in your Omeka theme, you can edit your theme templates or you can edit the `ctc_toc.js` file. For now, I'm not making this (non-developer) configurable.
+
+If the user doesn't have JavaScript enabled or if there's some sort of error, the page will just look ... normal. No table of contents. Not a big deal. If something isn't working, please check the browser console for obvious content errors (like not having any `H2s` on the page) before reporting a bug.
 
 ## Screenshots
 
