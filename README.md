@@ -15,7 +15,7 @@ Create a simple page to use as a the parent (for example, a page with the title 
 - **length**: the length of the text snippet (excerpt) for each child page. _Number_ (default is `500`)
 - **author**: sets whether to display the name of the user who created the page. _Boolean_ (default is `true`)
 - **date**: sets whether to display the date the page was created. _Boolean_ (default is `true`)
-- **more**: sets wether to display the "read more" link after the text snippet. _Boolean_ (default is `true`)
+- **more**: sets whether to display the "read more" link after the text snippet. _Boolean_ (default is `true`)
 
 ### Example with no options
 
