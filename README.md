@@ -50,4 +50,5 @@ Note that this plugin does not ship with any CSS. If you don't like the way some
 ## Screenshots
 
 ![Screenshot](plugin.png)
+
 ![Screenshot](plugin2.png)
