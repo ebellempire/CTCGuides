@@ -23,12 +23,14 @@ class CTCGuidesPlugin extends Omeka_Plugin_AbstractPlugin
     }
     public function ctc_banner($args)
     {
-        if (isset($args) && isset($args['src'])) {
-            $figcaption = isset($args['caption']) ? '<figcaption style="font-style:italic;color:#666;">'.$args['caption'].'</figcaption>' : null;
-            $source = isset($args['source']) ? '&nbsp;'.'<a href="'.args['source'].'" target="_blank">'.__('Image Source').'</a>' : null;
+        if (isset($args) && isset($args['src']) && filter_var($args['src'], FILTER_VALIDATE_URL)) {
+            $caption = isset($args['caption']) ? strip_tags($args['caption']) : null;
+            $source = isset($args['source']) && filter_var($args['source'], FILTER_VALIDATE_URL) ? '&nbsp;<a style="display:inline;" href="'.strip_tags($args['source']).'" target="_blank">'.__('Image Source').'</a>' : null;
             return '<figure class="ctc-banner" style="margin:0;padding:0;">'.
             '<div style="background-image:url('.$args['src'].');padding-top:300px;background-position:center;background-size:cover;background-color:#ccc;"></div>'.
-            $figcaption.'</figure>';
+            '<figcaption style="font-style:italic;color:#666;">'.$caption.$source.'</figcaption></figure>';
+        } elseif (isset($args) && isset($args['src'])) {
+            return '<p><em>'.__('Plugin error: Invalid <code>src</code> value in banner shortcode!').'</em></p>';
         }
     }
 }
