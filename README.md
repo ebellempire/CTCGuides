@@ -77,11 +77,11 @@ If the user doesn't have JavaScript enabled or if there's some sort of error, th
 
 ## Screenshots
 
-![Screenshot](plugin.png)
+![Screenshot](/screenshots/plugin.png)
 _add `[toc]` to any SimplePage that is structured with `H2s`_
 
-![Screenshot](plugin2.png)
+![Screenshot](/screenshots/plugin2.png)
 _add `[guides]` to a SimplePage or `$this->shortcodes([guides])` to any theme template_
 
-![Screenshot](plugin3.png)
+![Screenshot](/screenshots/plugin3.png)
 _add `[banner]` to a SimplePage_
