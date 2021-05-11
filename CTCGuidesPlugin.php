@@ -31,6 +31,8 @@ class CTCGuidesPlugin extends Omeka_Plugin_AbstractPlugin
             '<figcaption style="font-style:italic;color:#666;">'.$caption.$source.'</figcaption></figure>';
         } elseif (isset($args) && isset($args['src'])) {
             return '<p><em>'.__('Plugin error: Invalid <code>src</code> value in banner shortcode!').'</em></p>';
+        } else {
+            return '<p><em>'.__('Plugin error: Required <code>src</code> value missing from banner shortcode!').'</em></p>';
         }
     }
 }
