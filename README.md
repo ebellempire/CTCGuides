@@ -82,3 +82,6 @@ _add `[toc]` to any SimplePage that is structured with `H2s`_
 
 ![Screenshot](plugin2.png)
 _add `[guides]` to a SimplePage or `$this->shortcodes([guides])` to any theme template_
+
+![Screenshot](plugin3.png)
+_add `[banner]` to a SimplePage_
