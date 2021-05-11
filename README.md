@@ -51,7 +51,7 @@ This shortcode can be used to create responsive banner images. The image is outp
 
 - **src**: the location of the image file. _URL_ (required)
 - **caption**: a caption for the image. _String_ (optional)
-- **source**: the source of the image _URL_ (optional)
+- **source**: a source where the user can learn more about the image. _URL_ (optional)
 
 ### Example with only the required `src` option
 
