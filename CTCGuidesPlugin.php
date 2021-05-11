@@ -10,6 +10,7 @@ class CTCGuidesPlugin extends Omeka_Plugin_AbstractPlugin
     {
         add_shortcode('guides', array($this, 'ctc_postlist'));
         add_shortcode('toc', array($this, 'ctc_table_of_contents'));
+        add_shortcode('banner', array($this, 'ctc_banner'));
     }
 
     public function ctc_postlist($args)
@@ -19,6 +20,16 @@ class CTCGuidesPlugin extends Omeka_Plugin_AbstractPlugin
     public function ctc_table_of_contents($args)
     {
         return '<div id="ctc_toc_container"></div><script type="text/javascript" src="/plugins/CTCGuides/ctc_toc.js"></script>';
+    }
+    public function ctc_banner($args)
+    {
+        if (isset($args) && isset($args['src'])) {
+            $figcaption = isset($args['caption']) ? '<figcaption style="font-style:italic;color:#666;">'.$args['caption'].'</figcaption>' : null;
+            $source = isset($args['source']) ? '&nbsp;'.'<a href="'.args['source'].'" target="_blank">'.__('Image Source').'</a>' : null;
+            return '<figure class="ctc-banner" style="margin:0;padding:0;">'.
+            '<div style="background-image:url('.$args['src'].');padding-top:300px;background-position:center;background-size:cover;background-color:#ccc;"></div>'.
+            $figcaption.'</figure>';
+        }
     }
 }
 
