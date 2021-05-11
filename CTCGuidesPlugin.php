@@ -55,6 +55,7 @@ function ctc_display_postlist($args)
                 if ($show_readmore) {
                     $truncate .= '&nbsp;<a href="'.$url.'">'.__('Read More').'</a>';
                 }
+                $text = trim(preg_replace("/\s*(?:\[[^][]*])/", "", $page['text'])); // remove any shortcode bracket text
                 $userid=$page['created_by_user_id'];
                 $username=get_record_by_id('user', $userid)->name ?
                     get_record_by_id('user', $userid)->name :
@@ -64,7 +65,7 @@ function ctc_display_postlist($args)
                 $html.='<div class="byline">'.($show_date ? __('Posted on %s', $date) : null).' '.($show_author ? __('by %s', $username) : null).'</div>';
 
                 $html.='<p>'.snippet(
-                    $page['text'],
+                    $text,
                     0,
                     $excerpt_length,
                     $truncate
@@ -76,8 +77,8 @@ function ctc_display_postlist($args)
                 $i++;
             }
         }
-        return count($posts)>0 ? '<div class="posts">'.implode('', $posts) .'</div>' : '<p><em>No posts found!</em></p>';
+        return count($posts)>0 ? '<div class="posts">'.implode('', $posts) .'</div>' : '<p><em>'.__('No posts found!').'</em></p>';
     } else {
-        return '<p><em>No posts found!</em></p>';
+        return '<p><em>'.__('No posts found!').'</em></p>';
     }
 }
