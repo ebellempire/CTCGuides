@@ -43,6 +43,26 @@ echo $this->shortcodes([guides parent="guides" number="10" length="200" author="
 
 This one is simple. Just put `[toc]` anywhere on a page that is structured using `H2` elements and that area will display a linked table of contents for the page.Each `H2` will be given a unique `id` (careful, it will replace existing `ids`) and a "back to top" link will be appended after the `H2`. Basically, the result is like a standard old-school FAQ.
 
+## Using the `[banner]` Shortcode
+
+This shortcode can be used to create responsive banner images. The image is output as the background-image inside a `<figure>` element with `<figcaption>` containing optional caption text and link to the image's original source.
+
+### Options
+
+- **src**: the location of the image file. _URL_ (required)
+- **caption**: a caption for the image. _String_ (optional)
+- **source**: the source of the image _URL_ (optional)
+
+### Example with only the required `src` option
+
+`[banner src="https://example.com/image.jpg"]`
+
+### Example with all options
+
+```
+[banner src="https://example.com/image.jpg" caption="An adorable kitten." source="https://example.com"]
+```
+
 ## Other Notes
 
 ### Styles
