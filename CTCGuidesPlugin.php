@@ -19,7 +19,7 @@ class CTCGuidesPlugin extends Omeka_Plugin_AbstractPlugin
     }
     public function ctc_table_of_contents($args)
     {
-        return '<div id="ctc_toc_container"></div><script type="text/javascript" src="/plugins/CTCGuides/ctc_toc.js"></script>';
+        return '<div id="ctc_toc_container"></div><script type="text/javascript" src="/plugins/CTCGuides/javascripts/ctc_toc.js"></script>';
     }
     public function ctc_banner($args)
     {
