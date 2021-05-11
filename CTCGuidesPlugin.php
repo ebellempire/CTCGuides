@@ -40,9 +40,6 @@ function ctc_display_postlist($args)
         $show_date=isset($args['date']) ? filter_var($args['date'], FILTER_VALIDATE_BOOLEAN) : true;
         $show_readmore=isset($args['more']) ? filter_var($args['more'], FILTER_VALIDATE_BOOLEAN) : true;
         $truncate = '&nbsp;&hellip;';
-        if ($show_readmore) {
-            $truncate .= '&nbsp;<a href="'.$url.'">'.__('Read More').'</a>';
-        }
         $posts=array();
         $i=0;
         usort($pages, "ctc_sortByDateDesc");
@@ -55,6 +52,9 @@ function ctc_display_postlist($args)
             if ($page['parent_id']==$guideParentId && $page['is_published']) {
                 $date=date('d M Y', strtotime($page['inserted']));
                 $url=WEB_ROOT.'/'.$page['slug'];
+                if ($show_readmore) {
+                    $truncate .= '&nbsp;<a href="'.$url.'">'.__('Read More').'</a>';
+                }
                 $userid=$page['created_by_user_id'];
                 $username=get_record_by_id('user', $userid)->name ?
                     get_record_by_id('user', $userid)->name :
