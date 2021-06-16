@@ -17,6 +17,8 @@ Create a simple page to use as a the parent (for example, a page with the title 
 - **date**: sets whether to display the date the page was created. _Boolean_ (default is `true`)
 - **more**: sets whether to display the "read more" link after the text snippet. _Boolean_ (default is `true`)
 
+_**NOTE**: Only Simple Pages marked as "public" will appear in the generated output._
+
 ### Example with no options
 
 `[guides]`
