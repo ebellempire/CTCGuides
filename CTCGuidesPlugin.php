@@ -68,7 +68,7 @@ function ctc_display_postlist($args)
                 $date=date('d M Y', strtotime($page['inserted']));
                 $url=WEB_ROOT.'/'.$page['slug'];
                 if ($show_readmore) {
-                    $truncate .= '&nbsp;<a href="'.$url.'">'.__('Read More').'</a>';
+                    $truncate = '&nbsp;&hellip;&nbsp;<a href="'.$url.'">'.__('Read More').'</a>';
                 }
                 $text = trim(preg_replace("/\s*(?:\[[^][]*])/", "", $page['text'])); // remove any shortcode bracket text
                 $userid=$page['created_by_user_id'];
